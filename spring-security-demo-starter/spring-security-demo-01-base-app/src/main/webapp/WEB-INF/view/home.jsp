@@ -11,7 +11,7 @@
     <title>Company Home Page</title>
 </head>
 <body>
-<h2>freudromero Company Home Page</h2>
+<h2>freudromero Company Home Page - Yohoo!!!</h2>
 <hr>
 
 Welcome to the freudromero Company Home Page!

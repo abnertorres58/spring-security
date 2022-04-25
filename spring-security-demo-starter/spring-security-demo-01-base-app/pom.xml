@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.luv2code</groupId>
+	<groupId>com.freudromero</groupId>
 	<artifactId>spring-security-demo</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
@@ -10,7 +10,8 @@
 	<name>spring-security-demo</name>
 
 	<properties>
-		<springframework.version>5.3.18</springframework.version>
+		<springframework.version>5.3.13</springframework.version>
+		<springsecurity.version>5.6.0</springsecurity.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -23,6 +24,20 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
+		</dependency>
+
+	<!--		Spring Security-->
+	<!--		spring-security-web and spring-security-config-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springsecurity.version}</version>
 		</dependency>
 
 		<!-- Servlet, JSP and JSTL support -->
