@@ -1,6 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-<%--<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -24,19 +23,22 @@
 
 <hr>
 
-<%--Add link to point to /leaders ... this is for the managers--%>
 
-<p>
-    <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
-    (Only for manager peeps)
-</p>
+<security:authorize access="hasRole('MANAGER')">
+    <%--Add link to point to /leaders ... this is for the managers--%>
+    <p>
+        <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+        (Only for manager peeps)
+    </p>
+</security:authorize>
 
+<security:authorize access="hasRole('ADMIN')">
 <%--Add a link to point to /systems ... this is only for the admins--%>
-
-<p>
-    <a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
-    (Only for admin peeps)
-</p>
+    <p>
+        <a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+        (Only for admin peeps)
+    </p>
+</security:authorize>
 <hr>
 
 
