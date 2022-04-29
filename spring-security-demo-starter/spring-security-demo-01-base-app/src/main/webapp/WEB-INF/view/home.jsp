@@ -23,7 +23,13 @@
 </p>
 
 <hr>
+<%--Add link to point to /leaders ... this is for the managers--%>
 
+<p>
+    <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+    (Only for manager peeps)
+</p>
+<hr>
 
 
 <%-- Add Logout button--%>
