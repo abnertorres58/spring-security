@@ -4,6 +4,12 @@
 <html>
 <head>
     <title>Custom Login Page</title>
+
+    <style>
+        .failed {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <h3>My Custom Login Page</h3>
@@ -12,7 +18,7 @@
                     method="post">
         <%--            Check for login error --%>
             <c:if test="${param.error != null}">
-                <i>Sorry! You entered invalid username/password.</i>
+                <i class="failed">Sorry! You entered invalid username/password.</i>
             </c:if>
 
                 <p>
