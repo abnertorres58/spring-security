@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fred
-  Date: 2022-04-22
-  Time: 5:17 p.m.
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,6 +9,14 @@
 <hr>
 
 Welcome to the freudromero Company Home Page!
+
+
+<%-- Add Logout button--%>
+<form:form action="${pageContext.request.contextPath}/logout" method="post">
+
+    <input type="submit" value="Logout"/>
+
+</form:form>
 
 </body>
 </html>
