@@ -39,7 +39,7 @@
         (Only for admin peeps)
     </p>
 </security:authorize>
-<hr>
+
 
 
 <%-- Add Logout button--%>
